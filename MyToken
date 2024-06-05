@@ -18,15 +18,16 @@ pragma solidity 0.8.18;
 contract MyFirstToken {
 
     // public variables here
-    string public tokenName = "Alpha";
+    string public tokenName = "Epsilon";
+    string public tokenAbbreviation = "Epsi";
     uint public totalSuppliedTokens; // by default 0
 
     // mapping variable here
-    mapping (address => uint) public balances;
+    mapping  (address => uint) public balances;
 
     // mint function
     function minting(address a, uint tokens) public{
-        // totalSuppliedTokens = totalSuppliedTokens + tokens
+        // totalSuppliedTokens = totalSuppliedTokens + tokens;
         totalSuppliedTokens += tokens;
 
         balances[a] += tokens;
@@ -40,5 +41,4 @@ contract MyFirstToken {
             balances[a] -= tokens;
         }
     }
-
 }
